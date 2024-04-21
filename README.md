@@ -6,7 +6,7 @@
 
 Hello and welcome to the Basics of JavaScript module! I am excited to have you join us on this journey
 into the world of JavaScript programming. In this module, you'll learn the fundamental concepts and
-techniques needed to get started with JavaScript. You can check the agenda [here](https://github.com/Nihil96/JavaScript_Basics/blob/main/Agenda.md)
+techniques needed to get started with JavaScript. You can check the agenda [here](https://github.com/Nihil96/javaScript-basics/blob/main/Agenda.md)
 
 ## About this Repository
 
