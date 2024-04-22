@@ -93,5 +93,14 @@ let test = (a && b) || (c && !d) // --> false || false
 
 let number1 = 5
 let number2 = 51
-let fakeNumber = "5"
-console.log(number1 === fakeNumber)
+let fakeNumber = 5
+console.log(number1 === fakeNumber) // false
+
+// typeof operator
+
+let randomNum = 87
+let randomString = "Hello World!"
+let randomBool = true
+
+console.log(typeof randomBool) // this will return 'boolean'
+console.log(typeof randomNum) // this will return 'number'
