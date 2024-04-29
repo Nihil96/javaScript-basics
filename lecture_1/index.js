@@ -68,12 +68,53 @@ function printMyName() {
 // printMyName()
 
 // simple version
+// function printMyNumber(number) {
+//   if (number > 100) {
+//     return "Ovoj broj e pogolem od 100"
+//   } else {
+//     return "Ovoj broj e pomal od 100"
+//   }
+// }
+
+// console.log(printMyNumber(657))
+
+// more specific version
 function printMyNumber(number) {
-  if (number > 100) {
-    return "Ovoj broj e pogolem od 100"
+  if (typeof number === "number") {
+    if (number > 100) {
+      console.log(`This ${number} is greater then 100`)
+    } else if (number === 100) {
+      console.log("This number", number, "is equal to 100")
+    } else {
+      console.log("This number", number, "is less than 100")
+    }
   } else {
-    return "Ovoj broj e pomal od 100"
+    console.log("This is not a number it's:", typeof number)
   }
 }
 
-console.log(printMyNumber(657))
+// printMyNumber(100)
+
+// arrow function
+const greet = (name) => {
+  return `Hello ${name}`
+}
+// console.log(greet("Marko"))
+
+// function expression
+let mult = function (x, y, z) {
+  return x * y * z
+}
+
+// console.log(mult(10, 10, 10))
+
+// High-order function
+function applyOperation(a, b, func) {
+  return func(a, b)
+}
+
+let sub = applyOperation(10, 20, function (x, y) {
+  return x - y
+})
+
+console.log(sub)
