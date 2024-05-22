@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction to DOM</title>
+  </head>
+  <body>
+    <h1 id="title">Introduction to Document Object Model</h1>
+    <p class="paragraph">Paragraph 1</p>
+    <p class="paragraph">Paragraph 2</p>
+    <p class="paragraph">Paragraph 3</p>
+
+    <div id="container"></div>
+
+    <script>
+      // Accessing elements
+      const title = document.getElementById("title")
+      // console.log(title)
+
+      const paragraphElements = document.getElementsByClassName("paragraph")
+      // console.log(paragraphElements) // returns HTMLCollection
+
+      const paragraphsArray = Array.from(paragraphElements)
+      // paragraphsArray.forEach((item) => console.log(item))
+      // console.log(paragraphElements[0]) // returns the first element from the HTMLCollection
+
+      const elementsByTag = document.getElementsByTagName("p")
+      //   console.log(elementsByTag)
+
+      const elements = document.querySelectorAll(".paragraph")
+      // console.log(elements) // returns NodeList
+      // elements.forEach((item) => console.log(item))
+
+      const titleElement = document.querySelector("#title")
+      // console.log(titleElement)
+
+      // Styling Elements
+      const thirdElementParagraph = elements[2]
+      thirdElementParagraph.style.color = "red"
+      thirdElementParagraph.style.fontSize = "30px"
+
+      titleElement.style.cssText =
+        "color: blue; font-size: 36px; margin-left: 100px"
+
+      // Creating DOM Nodes
+      const newTitle = document.createElement("h2")
+
+      newTitle.textContent = "This is new title"
+      newTitle.setAttribute("id", "new-title")
+      document.body.appendChild(newTitle)
+
+      // Adding elements to the DOM
+      const container = document.getElementById("container")
+      const newDivElement = document.createElement("div")
+      container.appendChild(newDivElement)
+
+      const newImageElement = document.createElement("img")
+      container.insertBefore(newImageElement, newDivElement)
+
+      // Modifying Elements
+      const elementToRemove = document.getElementById("new-title")
+      const parentElement = elementToRemove.parentNode
+      parentElement.removeChild(elementToRemove)
+    </script>
+  </body>
+</html>
